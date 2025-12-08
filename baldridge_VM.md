@@ -11,7 +11,7 @@ You will need to connect to the university network using the Cisco AnyConnect VP
 ssh <WashU_key_id>@p_<WashU_key_id>#accounts.ad.wustl.edu@wuit-s-14467.accounts.ad.wustl.edu@securepsmp.wustl.edu 
 ```
 
-The login requires you WashU password and confirmation via DUO.
+The login requires your WashU password and confirmation via DUO.
 
 ### 2. Transfer files from/to the VM server
 
