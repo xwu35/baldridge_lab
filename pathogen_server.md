@@ -1,6 +1,6 @@
 ## Pathogen server 
 
-These are instructions for logging in to the Pathogen server, which is used R-related analyses. However, I do not personally use this server, as I run all my analyses on the HTCF server, so my experience with it is limited.
+These are instructions for logging in to the Pathogen server, which is used for R-related analyses. However, I do not personally use this server, as I run all my analyses on HTCF, so my experience with it is limited.
 
 ### 1. Log in to the server
 
