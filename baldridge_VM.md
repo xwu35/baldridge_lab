@@ -42,7 +42,7 @@ Port: 22
 To deploy a Shiny app, move the directory containing your app into the `shiny-server` directory. You can then view the app by opening the link in a browser. The link is not shared here for security reason, but is available in `/srv/shiny-server/server_domain.txt`.
 
 ```bash
-mv <your_file> /srv/shiny-server/
+sudo mv <your_directory> /srv/shiny-server/
 ```
 
 You can find error log in `/var/log/shiny-server/`.
