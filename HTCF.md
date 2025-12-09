@@ -10,6 +10,7 @@ Open a terminal, and type:
 ```bash
 ssh <WashU_key_id>@login.htcf.wustl.edu
 ```
+
 Use your WashU password for the password prompt. After logging into HTCF, you will be in your home directory. Note that the home directory is limited to 20GB but is not subject to purging (see purge policy below). You can install small packages in your home directory. For larger software or databases, you may use the `/ref/mtblab` directory, which is also not purged. Before installing any software or database there, please check whether it has been installed by lab members to avoid redundancy and save space.
 
 ### 2. Scratch directory 
@@ -25,6 +26,10 @@ If the directory corresponding to your WashU_key_id is not listed, you can creat
 ```bash
 mkdir <WashU_key_id>
 ```
+
+**Notes from HTCF web: Data stored in `/scratch` is subject to the [Scratch Data Cleaning Policy](https://htcf.github.io/docs/policies/#scratch-data-cleaning). Files on `scratch` that have not been modified for more than 60 days are garbage collected and placed in a “trash” location (`/scratch/trash`). After 30 days in the trash location, user files are purged from the system. Once purged, there is no way files can be restored.** 
+
+Keep this in mind and back up your data frequently to the long-term storage (see storage directory below). You can also use the `touch` command to update file timestamps to prevent them from being purged (e.g. `touch -m filename`). If a file is garbage-collected, you can restore it by moving them out of the `/scratch/trash` directory.
 
 ### 3. Storage directory
 
@@ -87,10 +92,6 @@ View the progress of your job using
 squeue -u <WashU_key_id>
 ```
 
-**Note from HTCF web: Data stored in `/scratch` is subject to the [Scratch Data Cleaning Policy](https://htcf.github.io/docs/policies/#scratch-data-cleaning). Files on `scratch` that have not been modified for more than 60 days are garbage collected and placed in a “trash” location (`/scratch/trash`). After 30 days in the trash location, user files are purged from the system. Once purged, there is no way files can be restored.** 
-
-Keep this in mind and back up your data frequently to the long-term storage. You can also use the `touch` command to update file timestamps to prevent them from being purged (e.g. `touch -m filename`). If a file is garbage-collected, you can restore it by moving them out of the `/scratch/trash` directory.
-
 ### 6. Run dependency jobs
 
 You can run dependency jobs to ensure tasks are executed in a specific order. See the commands below for examples.
@@ -100,7 +101,7 @@ You can run dependency jobs to ensure tasks are executed in a specific order. Se
 sbatch job1.sh
 
 # run job2.sh if job1 finishes successfully
-sbatch --dependency=afternotok:jobid_of_job1 job2.sh
+sbatch --dependency=afterok:jobid_of_job1 job2.sh
 ```
 
 #### Parameters for running dependency jobs
