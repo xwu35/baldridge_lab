@@ -77,7 +77,11 @@ emacs myjob.sh
 #SBATCH --mail-user=<your_email_address> # Email address to receive notifications about submitted job
 #SBATCH --mail-type=ALL
 
-commands here
+# if you want to activate a conda environment
+eval "$(conda shell.bash hook)"
+conda activate your_conda_env_name
+
+some commands here
 ```
 
 Submit the sbatch script using the following command.
