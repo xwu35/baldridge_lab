@@ -185,7 +185,7 @@ beegfs-ctl --getquota --uid <WashU_key_id>
 beegfs-ctl --getquota --gid mtblab
 ```
 
-### 8. Check files that will be purged
+### 10. Check files that will be purged
 
 The command below lists all files in the specified directory that are older than 50 days.
 
