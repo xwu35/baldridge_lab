@@ -2,6 +2,8 @@
 
 These are instructions for logging in to the Pathogen server, which is used for R-related analyses. However, I do not personally use this server, as I run all my analyses on HTCF, so my experience with it is limited.
 
+**This server is no longer maintained, so please use it with caution and back up your data elsewhere**
+
 ### 1. Log in to the server
 
 You will need to connect to the university network using the Cisco AnyConnect VPN first. Then open a terminal and type:
